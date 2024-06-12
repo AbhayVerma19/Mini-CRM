@@ -32,7 +32,7 @@ function Footer() {
                 </svg>
             </a>
 
-            <a href="#" class="text-white hover:text-gray-200">
+            <a href="https://github.com/AbhayVerma19/Mini-CRM.git" class="text-white hover:text-gray-200">
                 <span class="sr-only">GitHub</span>
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path fill-rule="evenodd"

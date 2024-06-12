@@ -51,7 +51,7 @@ const Home = () => {
             width="200"
             height="150"
           />
-          <p className='mt-6 mb-4'>Create Audience</p>
+          <p className=' mt-6 mb-4'>Create Audience</p>
           <Link to={'/audience'}>
 
           <button id='homebtn' className="Clickbutton" type="button" >
