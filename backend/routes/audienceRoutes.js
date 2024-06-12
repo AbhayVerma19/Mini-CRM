@@ -10,6 +10,7 @@ const operatorMapping = {
 
 router.post('/', async (req, res) => {
     const { rules } = req.body;
+    console.log(rules)
   
     try {
       if (!Array.isArray(rules) || rules.length === 0) {
@@ -24,8 +25,9 @@ router.post('/', async (req, res) => {
         if (!operator) {
           return res.status(400).send({ error: `Invalid operator: ${rule.operator}` });
         }
-  
-        const condition = { [rule.field]: { [operator]: rule.value } };
+        const value=parseFloat(rule.value)
+        const condition = { [rule.field]: { [operator]: value } };
+        
   
         if (i === 0) {
           query = condition;
@@ -43,7 +45,8 @@ router.post('/', async (req, res) => {
         return res.status(500).send({ error: "Invalid audience data" });
       }
       res.json({ size: audience.length , audience });
-      console.log(audience)
+      //console.log(audience)
+      
     } catch (error) {
       console.error("Error fetching audience:", error);
       res.status(500).send({ error: error.message });

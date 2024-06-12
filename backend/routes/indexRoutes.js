@@ -3,6 +3,7 @@ const customerRoutes = require('./customerRoutes.js');
 const orderRoutes = require('./orderRoutes.js');
 const campaignRoutes = require('./campaignRoutes.js');
 const audienceRoutes = require('./audienceRoutes.js');
+const adminLogin=require('./adminLogin.js')
 
 const router = express();
 router.get('/',(req,res)=>{
@@ -12,5 +13,6 @@ router.use('/customer', customerRoutes);
 router.use('/order', orderRoutes);
 router.use('/campaign', campaignRoutes);
 router.use('/audience', audienceRoutes);
+router.use('/admin', adminLogin)
 
 module.exports=router;

@@ -10,9 +10,32 @@ router.get('/', async (req,res)=>{
         res.json(campaign).status(200)
         
     } catch (error) {
+      console.log(error)
         res.send(error)
     }
 })
+
+router.post("/sendAudience", async (req, res) => {
+  try {
+    const campaignId = req.body.id;
+    console.log(req.body.id)
+
+    
+    const communicationLogs = await CommunicationLog.find({ campaignId: campaignId.toString() });
+
+
+    
+    const customerIds = communicationLogs.map(log => log.customerId);
+
+    const customers = await Customer.find({ _id: { $in: customerIds } });
+
+    res.json(customers);
+    
+  } catch (error) {
+    console.error("Error fetching customers for campaign:", error);
+    res.status(500).send({ error: "Failed to fetch customers" });
+  }
+});
 
 router.post("/sendCampaign", async (req, res) => {
   const { audience } = req.body;
@@ -57,7 +80,6 @@ const DummyVendorAPI = async (audience,campaignId) => {
     const customer = await Customer.findById(_id);
     const deliveryStatus = Math.random() < 0.9 ? "SENT" : "FAILED";
     await deliveryReceiptAPI(customer._id, deliveryStatus, campaignId);
-    console.log(_id);
   }
 };
 

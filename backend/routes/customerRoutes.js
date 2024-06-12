@@ -22,12 +22,13 @@ router.post("/", async (req, res) => {
       lastVisit: new Date().toLocaleString(),
     });
      await newCustomer.save()
-    res.status(200).send(newCustomer._id);
+    res.status(200).json(newCustomer._id);
   } catch (error) {
     if (error.name === 'ValidationError') {
-      return res.status(400).send({ error: error.message });
+      console.log(error)
+      return res.status(400).json(error);
     }
-    res.status(500).send({ error: error.message });
+    res.status(500).json({ error: error.message });
   }
 });
 module.exports = router;
