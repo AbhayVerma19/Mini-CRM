@@ -73,9 +73,8 @@ const CustomerForm = () => {
                 Submit
               </button>
             </div>
-              <div className="flex bg-white justify-center w-full rounded-md">
-              <div className= "justify-center">
-
+              <div className="flex w-full bg-white justify-center  rounded-md">
+              <div className= "  justify-center">
              {id}
               </div>
               </div>

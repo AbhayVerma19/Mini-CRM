@@ -16,19 +16,14 @@ function AudienceForm() {
   const [audience, setAudience] = useState([]);
 
   const addRule = () => {
-    setRules([...rules, { field: "", operator: "", value: 0, logic: "AND" }]);
+    setRules([...rules, { field: "totalSpends", operator: ">", value: 0, logic: "AND" }]);
   };
 
   const handleRuleChange = (index, field, value) => {
-  let newOperator = rules[index].operator;
-  if (field === "field") {
-    // Reset operator to default when changing the field
-    newOperator = ">";
-  }
-  const newRules = rules.map((rule, i) =>
-    i === index ? { ...rule, [field]: field === "value" ? parseFloat(value) : value, operator: newOperator } : rule
-  );
-  setRules(newRules);
+    const newRules = rules.map((rule, i) =>
+      i === index ? { ...rule, [field]: field === "value" ? parseFloat(value) : value } : rule
+    );
+    setRules(newRules);
 };
 
 
