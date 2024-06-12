@@ -1,0 +1,73 @@
+/* Import a font family of your choice */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* AudienceList styles */
+.audience-list {
+  max-width:800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.audience-list__heading {
+  margin-top: 0;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  background-color: #007bff;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.audience-list__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.audience-list__item {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.audience-list__item:hover {
+  background-color: #f7f7f7;
+}
+
+.audience-list__label {
+  font-weight: 500;
+  color: #666;
+  margin-right: 10px;
+}
+
+.audience-list__label::after {
+  content: ":";
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

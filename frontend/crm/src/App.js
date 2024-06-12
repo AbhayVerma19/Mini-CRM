@@ -1,40 +1,41 @@
-import React, { useState } from 'react';
-import CustomerForm from './components/CustomerForm';
-import OrderForm from './components/OrderForm';
-import AudienceForm from './components/AudienceForm';
-import CampaignList from './components/CampaignList';
-import { sendCampaign } from './api';
-import './App.css';  // Import CSS file
+import React, { useState } from "react";
+import CustomerForm from "./components/Customer/CustomerForm";
+import OrderForm from './components/Order/OrderForm';
+import AudienceForm from "./components/Audience/AudienceForm";
+import Navbar from "./components/Navbar/Navbar";
+import CampaignList from './components/Campaigns/CampaignList';
+import AudienceList from "./components/Audience/AudienceList";
+import Home from './components/Home/Home'
+import "./App.css"; // Import CSS file
+
+import { Route, Routes, Switch } from "react-router-dom";
 
 const App = () => {
-  const [audience, setAudience] = useState([]);
-  const [campaignMessage, setCampaignMessage] = useState('');
+  //   const [audience, setAudience] = useState([]);
+  //   const [campaignMessage, setCampaignMessage] = useState('');
 
-  const handleSendCampaign = async () => {
-    try {
-      const size = audience.length;
-      await sendCampaign({ audience, size, message: campaignMessage });
-      alert('Campaign sent successfully');
-    } catch (error) {
-      console.error('Error sending campaign:', error);
-    }
-  };
+  //   const handleSendCampaign = async () => {
+  //     try {
+  //       const size = audience.length;
+  //       await sendCampaign({ audience, size, message: campaignMessage });
+  //       alert('Campaign sent successfully');
+  //     } catch (error) {
+  //       console.error('Error sending campaign:', error);
+  //     }
+  //   };
 
   return (
     <div className="app">
-      <CustomerForm />
-      <OrderForm />
-      <AudienceForm setAudience={setAudience} />
-      <div className="send-campaign">
-        <h2>Send Campaign</h2>
-        <textarea
-          placeholder="Campaign Message"
-          value={campaignMessage}
-          onChange={(e) => setCampaignMessage(e.target.value)}
-        />
-        <button onClick={handleSendCampaign}>Send Campaign</button>
-      </div>
-      <CampaignList />
+      <Navbar/>
+      <Routes>
+
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/audience" element={<AudienceForm />}></Route>
+        <Route path="/customer" element={<CustomerForm />}></Route>
+        <Route path="/order" element={<OrderForm />}></Route>
+        <Route path="/campaign" element={<CampaignList />}></Route>
+        <Route path="/audienceList" element={<AudienceList />}></Route>
+      </Routes>
     </div>
   );
 };

@@ -1,0 +1,70 @@
+
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f7f7;
+}
+
+
+.OrderForm {
+  max-width: 60%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.OrderForm h2 {
+  margin-top: 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.OrderForm input[type="text"],
+.OrderForm input[type="number"] {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.OrderForm input[type="text"]:focus,
+.OrderForm input[type="number"]:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.OrderForm button[type="submit"] {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.OrderForm button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.OrderForm button[type="submit"]:active {
+  background-color: #3e8e41;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}

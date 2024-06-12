@@ -1,17 +1,19 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+ .aud{
+  background-color: #e3e3e3;
+  opacity: 0.9;
+  background-image: radial-gradient(#0760ddad 1px, #e3e3e3 0.35000000000000003px);
+  background-size: 7px 7px;
+  padding-top: 2rem;
   }
   
   .App {
-    max-width: 600px;
+    max-width: 60%;
     margin: 50px auto;
-    background: #fff;
+    background: #078edd;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+   
   }
   
   h1 {
@@ -56,11 +58,23 @@ body {
   }
   
   button[type="button"] {
-    background-color: #28a745;
+    /* background-color: #28a745; */
     margin-left: auto;
   }
   
   button[type="button"]:hover {
     background-color: #218838;
+  }
+
+  #checkBtn{
+    background-color: #078edd;
+    color:white;
+  }
+
+  #checkBtn:hover{
+    
+    background-color: #046299
+    
+    /* color: #078edd; */
   }
   
