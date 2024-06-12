@@ -1,8 +1,6 @@
  .aud{
   background-color: #e3e3e3;
-  opacity: 0.9;
-  background-image: radial-gradient(#0760ddad 1px, #e3e3e3 0.35000000000000003px);
-  background-size: 7px 7px;
+  background-image: linear-gradient(rgb(0, 179, 255), white);
   padding-top: 2rem;
   }
   
@@ -26,12 +24,16 @@
   form {
     display: flex;
     flex-direction: column;
+    
+    
+    
   }
   
   form > div {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    
   }
   
   select, input[type="number"], button {
@@ -43,14 +45,14 @@
   }
   
   button {
-    background-color: #007bff;
+    background-color: green;
     color: #fff;
     border: none;
     cursor: pointer;
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: green;
   }
   
   button[type="submit"] {
@@ -66,15 +68,26 @@
     background-color: #218838;
   }
 
+  #ruleform{
+    width: 52rem;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
   #checkBtn{
+    width:12rem;
     background-color: #078edd;
     color:white;
+    justify-content: center;
   }
 
   #checkBtn:hover{
     
-    background-color: #046299
+    background-color: #046299;
+    color:white;
     
-    /* color: #078edd; */
   }
   

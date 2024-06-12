@@ -7,11 +7,18 @@ const Navbar = () => {
     <div>
       <nav class="bg-blue-500 border-gray-200 py-2.5 ">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl  mx-auto">
+          
+        <Link to={'/'}>
+
+
           <img
             src={logo}
-            class="  -ml-20 w-32 h-24  rounded-xl"
+            class="  -ml-20  w-48 h-24  rounded-xl"
             alt=""
           />
+  
+        </Link>
+          
           <div class="flex items-center lg:order-2">
             <div class="hidden mt-2 mr-4 sm:inline-block"></div>
 
@@ -29,7 +36,7 @@ const Navbar = () => {
             <ul class="flex flex-col align-medium  text-lg lg:flex-row lg:space-x-5  lg:mt-0">
               <li>
                 <Link
-                  to={'/'}
+                  to={'/home'}
                   class="block py-2 px-3 text-black hover:text-white  "
                   aria-current="page"
                 >
@@ -49,7 +56,7 @@ const Navbar = () => {
                   to={'/order'}
                   class="block py-2 px-3 text-black  hover:text-white black "
                 >
-                  Place Order
+                  Order
                 </Link>
               </li>
               <li>

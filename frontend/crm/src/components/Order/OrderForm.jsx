@@ -27,6 +27,7 @@ const OrderForm = () => {
   };
 
   return (
+    <div className="outer h-screen">
     <div className="OrderForm">
       <form onSubmit={handleSubmit}>
       <div className="flex justify-center">
@@ -50,6 +51,7 @@ const OrderForm = () => {
           Create Order
         </button>
       </form>
+    </div>
     </div>
   );
 };

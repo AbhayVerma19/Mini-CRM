@@ -73,10 +73,11 @@ function AudienceForm() {
   return (
     <div className="aud h-screen">
       <div className="App ">
-        <h1 className="text-2xl font-bold text-white">Create Audience</h1>
-        <form onSubmit={handleSubmit}>
+        <h1 className="  text-2xl font-bold bg-white text-blue-500 mb-10 rounded-md">Create Audience</h1>
+        
+        <form id="ruleform" onSubmit={handleSubmit}>
           {rules.map((rule, index) => (
-            <div className=" space-x-2" key={index}>
+            <div className=" justify-evenly space-x-2" key={index}>
               <select
                 value={rule.field}
                 onChange={(e) =>
@@ -118,30 +119,34 @@ function AudienceForm() {
               )}
             </div>
           ))}
-          <button className="bg-blue-500 " type="button" onClick={addRule}>
+          <button className=" w-28 h-auto rounded-xl bg-green-500" type="button" onClick={addRule}>
             <div className="m-1  text-white">Add Rule</div>
           </button>
-          <button className="h-8" id="checkBtn" type="submit">
+          <div className="justify-center">
+          <button className="h-8 " id="checkBtn" type="submit">
             Check Audience Size
           </button>
+          </div>
         </form>
+        
 
         {isSizeVisible ? (
           <>
-            <div className="flex-col">
+            <div className="flex-col ">
               <div
-                className=" ml-5 *flex  bg-white rounded-md text-center  text-blue-600"
+                className=" ml-5  *flex  bg-white rounded-md text-center  text-blue-600"
                 style={{ width: 830 }}
               >
                 Audience Size: {size}
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-center w-full">
                 <form onSubmit={handleSendCampaign}>
                   <textarea
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Enter campaign message"
-                    className="w-full p-2 mt-2"
+                    className=" p-2 mt-2 rounded-md"
+                    style={{width:830}}
                   />
                   <button
                     type="submit"

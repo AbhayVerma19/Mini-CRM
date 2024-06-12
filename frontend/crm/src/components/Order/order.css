@@ -7,21 +7,22 @@
   margin: 0;
   padding: 0;
 }
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f7f7f7;
+.outer{
+  background-image: linear-gradient(rgb(0, 179, 255), white);
+  margin-top: -40px;
+  
 }
-
 
 .OrderForm {
   max-width: 60%;
   margin: 40px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #031f74;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+  
 }
 
 .OrderForm h2 {
