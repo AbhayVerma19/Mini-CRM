@@ -1,7 +1,4 @@
-/* Import a font family of your choice */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
-/* Global styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,7 +10,6 @@ body {
   background-color: #f7f7f7;
 }
 
-/* AudienceList styles */
 .audience-list {
   max-width:800px;
   margin: 40px auto;
@@ -62,12 +58,3 @@ body {
   content: ":";
 }
 
-/* Animations */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}

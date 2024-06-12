@@ -13,7 +13,7 @@ const CampaignList = () => {
   useEffect(() => {
     const getCampaigns = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/campaign`);
+        const response = await axios.get(`https://mini-crm-js0c.onrender.com/api/campaign`);
         const sortedCampaigns = response.data.sort(
           (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
         );
@@ -28,7 +28,7 @@ const CampaignList = () => {
   const sendAudience = async (campaignId) => {
     try {
       await axios
-        .post("http://localhost:5000/api/campaign/sendAudience", {
+        .post("https://mini-crm-js0c.onrender.com/api/campaign/sendAudience", {
           id: campaignId,
         })
         .then((res) => {

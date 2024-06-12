@@ -14,7 +14,7 @@ const CustomerForm = () => {
         email:email
     }
     console.log(bodyjson)
-      await axios.post("http://localhost:5000/api/customer" , bodyjson).then((res)=>{
+      await axios.post("https://mini-crm-js0c.onrender.com/api/customer" , bodyjson).then((res)=>{
         console.log(res)
         setId(res.data)
         alert("Customer created successfully. Please note your Id");

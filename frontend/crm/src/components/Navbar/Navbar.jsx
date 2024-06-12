@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../logo.jpg";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../Firebase/AuthContext"; // Ensure this is the correct path to your AuthContext
+import { useAuth } from "../../Firebase/AuthContext"; 
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -22,7 +22,7 @@ const Logout = async ()=>{
           </Link>
 
           <div class="flex items-center lg:order-2">
-            {/* <div class="hidden mt-2 mr-4 sm:inline-block"></div> */}
+           
 
             {user ? (
               <>

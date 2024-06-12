@@ -14,7 +14,7 @@ const OrderForm = () => {
       };
       console.log(bodyjson);
       await axios
-        .post(`http://localhost:5000/api/order/${customerId}`, bodyjson)
+        .post(`https://mini-crm-js0c.onrender.com/api/order/${customerId}`, bodyjson)
         .then((res) => {
           console.log(res.data);
           alert("Order created successfully");

@@ -32,7 +32,7 @@ function AudienceForm() {
     try {
       console.log({ rules });
       await axios
-        .post("http://localhost:5000/api/audience", { rules })
+        .post("https://mini-crm-js0c.onrender.com/api/audience", { rules })
         .then((res) => {
           setSize(res.data.size);
           setAudience(res.data.audience);
@@ -48,7 +48,7 @@ function AudienceForm() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/campaign/sendCampaign",
+        "https://mini-crm-js0c.onrender.com/api/campaign/sendCampaign",
         {
           audience: audience,
           size: size,
